@@ -1,0 +1,14 @@
+{
+  "name": "test-mapping",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+
+  "license": "MIT",
+  "bugs": {},
+  "dependencies": {
+    "node-calls-python": "^1.8.0",
+    "rdf-ext": "^2.5.1",
+    "script": "^0.1.4"
+  }
+}
