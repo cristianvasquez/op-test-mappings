@@ -8,9 +8,12 @@
   "dependencies": {
     "@rdfjs-elements/formats-pretty": "^0.6.4",
     "@rdfjs/data-model": "^2.0.1",
+
+    "get-stream": "^8.0.1",
     "node-calls-python": "^1.8.0",
     "rdf-ext": "^2.5.1",
     "readable-stream": "^4.5.0",
-    "script": "^0.1.4"
+    "script": "^0.1.4",
+    "string-to-stream": "^3.0.1"
   }
 }

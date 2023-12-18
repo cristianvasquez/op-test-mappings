@@ -7,6 +7,11 @@ const ns = {
   rdfs: rdf.namespace('http://www.w3.org/2000/01/rdf-schema#'),
   ex: rdf.namespace('http://example.org/'),
   dot: rdf.namespace('http://pkm-united.org/'),
+  a4g: rdf.namespace('http://data.europa.eu/a4g/ontology#'),
+
+  rml: rdf.namespace('http://semweb.mmlab.be/ns/rml#'),
+  r2rml: rdf.namespace('http://www.w3.org/ns/r2rml#')
+
 }
 
 export default ns
