@@ -8,7 +8,7 @@ PREFIX schema: <http://schema.org/>
 	a rr:TriplesMap;
 
 	rml:logicalSource [
-		rml:source "data/characters.json";
+		rml:source "./simple/characters.json";
 		rml:referenceFormulation ql:JSONPath;
 		rml:iterator "$.characters[*]"
 	];
