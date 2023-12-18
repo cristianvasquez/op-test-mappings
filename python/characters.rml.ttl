@@ -3,12 +3,13 @@ PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
 PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX schema: <http://schema.org/>
+PREFIX : <http://example.org/>
 
-<#character>
+:character
 	a rr:TriplesMap;
 
 	rml:logicalSource [
-		rml:source "./simple/characters.json";
+		rml:source "./characters.json";
 		rml:referenceFormulation ql:JSONPath;
 		rml:iterator "$.characters[*]"
 	];

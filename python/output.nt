@@ -1,0 +1,12 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+
+<http://example.org/character/0> a ns1:Person ;
+    ns2:hairColor "black" ;
+    ns1:givenName "Ash" ;
+    ns1:lastName "Ketchum" .
+
+<http://example.org/character/1> a ns1:Person ;
+    ns2:hairColor "orange" ;
+    ns1:givenName "Misty" .
+

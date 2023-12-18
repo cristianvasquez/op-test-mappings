@@ -4,7 +4,7 @@ import { Readable } from "stream";
 const py = interpreter;
 
 async function createMapper() {
-  const pymodule = await py.import("python/run_morph_kgc.py");
+  const pymodule = await py.import("run_morph_kgc.py");
   return ({ mappingFile, outputFile }) =>
     py.callSync(pymodule, "write_file", mappingFile, outputFile);
 }
