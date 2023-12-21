@@ -2,3 +2,4 @@ node_modules
 output-local.nt
 __pycache__
 *.jar
+full_mapping.rml.ttl

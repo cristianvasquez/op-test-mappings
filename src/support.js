@@ -1,11 +1,13 @@
-import { TurtleSerializer } from '@rdfjs-elements/formats-pretty'
+import {
+  TurtleSerializer,
+  TrigSerializer,
+} from '@rdfjs-elements/formats-pretty'
 import rdf from 'rdf-ext'
 import ns from './namespaces.js'
 import getStream from 'get-stream'
 import formats from '@rdfjs/formats'
 import fs from 'fs'
-import { extname, join } from 'path';
-
+import { extname, join } from 'path'
 
 function toPlain (prefixes) {
   const result = {}
@@ -15,11 +17,18 @@ function toPlain (prefixes) {
   return result
 }
 
-const sink = new TurtleSerializer({
-  prefixes: toPlain(ns),
-})
+async function print ({ dataset }) {
+  const sink = new TrigSerializer({
+    prefixes: toPlain(ns),
+  })
+  const stream = await sink.import(dataset.toStream())
+  return await getStream(stream)
+}
 
 async function prettyPrint ({ dataset }) {
+  const sink = new TurtleSerializer({
+    prefixes: toPlain(ns),
+  })
   const stream = await sink.import(dataset.toStream())
   return await getStream(stream)
 }
@@ -31,11 +40,18 @@ async function readTurtleFiles ({ path }) {
     if (extname(file) === '.ttl') {
       const filePath = join(path, file)
       const fileStream = fs.createReadStream(filePath, 'utf-8')
-      await combinedDataset.import(
-        formats.parsers.import('text/turtle', fileStream))
+
+      const current = rdf.dataset()
+      await current.import(formats.parsers.import('text/turtle', fileStream))
+
+      for (const quad of current) {
+        quad.namedgraph = rdf.namedNode('file')
+        combinedDataset.add(quad)
+      }
+
     }
   }
   return combinedDataset
 }
 
-export { prettyPrint, readTurtleFiles }
+export { print, prettyPrint, readTurtleFiles }
