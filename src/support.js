@@ -32,7 +32,7 @@ async function prettyPrint ({ dataset }) {
   return await getStream(stream)
 }
 
-const test = (x) => true
+const test = (x) => !x.endsWith('object.rml.ttl')
 
 // What is the working combination?
 // const test = (x) => x.endsWith('notice.rml.ttl')

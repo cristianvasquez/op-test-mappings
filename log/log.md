@@ -2,6 +2,10 @@
 
 I don't know how to combine these mapping, the libraries fail without giving me any feedback.
 
+## Solution
+
+It worked when downgrading rmlmapper-6.3.0-r371-all.jar to rmlmapper-6.2.1-r368-all.jar
+
 ## Log 21/12/2023
 
 Setup RML.
@@ -46,6 +50,20 @@ at be.ugent.rml.cli.Main.main(Main.java:49)
 
 Gave a try to comake-mapper. It outputs an empty string.
 
-Gave a try to rml wrapper. It fails with the same error as no wrapper. 
+Gave a try to rml wrapper. It fails with the same error as no wrapper.
 
+## Scala
 
+I gave a try to the streamer.
+
+It gives me some feedback, but not so useful.
+
+```log
+16:31:07,689 WARN  io.rml.framework.core.extractors.std.StdTriplesMapExtractor$  - "http://publications.europa.eu/resource/authority/award-criterion-type/quality"^^<http://www.w3.org/2001/XMLSchema#string>: No template found.
+16:31:07,689 WARN  io.rml.framework.core.extractors.std.StdTriplesMapExtractor$  - http://data.europa.eu/a4g/mapping/sf-rml/AwardCriterionQuality: Skipping triples map.
+Exception in thread "main" io.rml.framework.shared.RMLException: "http://publications.europa.eu/resource/authority/award-criterion-type/quality"^^<http://www.w3.org/2001/XMLSchema#string>: No template found.
+```
+
+```log
+io.rml.framework.shared.RMLException: "http://publications.europa.eu/resource/authority/award-criterion-type/quality"^^<http://www.w3.org/2001/XMLSchema#string>: No template found.
+```
