@@ -1,14 +1,26 @@
+## Problem
+
+I don't know how to combine these mapping, the libraries fail without giving me any feedback.
+
 ## Log 21/12/2023
 
-Setup RML, two libraries. It didn't work with morphrc, in python.
+Setup RML.
 
-It produced RDF using rmlmapper and one segment of the mapping.
+## Hello world
+
+Worked in morphrc and rml.jar
+
+## Notice f03
+
+- It didn't work with morphrc (python).
+
+- Produced RDF with rmlmapper and one segment of the mapping.
 
 ```sh
 java -jar rmlmapper.jar -m transformation/mappings/technical_mapping_F03.rml.ttl
 ```
 
-When merging all partitions, and running
+However, when merging all partitions, and running
 
 ```sh
 java -jar rmlmapper.jar -m full_mapping.rml.ttl
@@ -29,3 +41,11 @@ at be.ugent.rml.Executor.execute(Executor.java:132)
 at be.ugent.rml.cli.Main.run(Main.java:416)
 at be.ugent.rml.cli.Main.main(Main.java:49)
 ```
+
+## Javascript
+
+Gave a try to comake-mapper. It outputs an empty string.
+
+Gave a try to rml wrapper. It fails with the same error as no wrapper. 
+
+

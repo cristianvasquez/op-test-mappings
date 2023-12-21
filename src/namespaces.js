@@ -10,8 +10,14 @@ const ns = {
   a4g: rdf.namespace('http://data.europa.eu/a4g/ontology#'),
 
   rml: rdf.namespace('http://semweb.mmlab.be/ns/rml#'),
-  r2rml: rdf.namespace('http://www.w3.org/ns/r2rml#')
+  r2rml: rdf.namespace('http://www.w3.org/ns/r2rml#'),
 
+  sfrml: rdf.namespace('http://data.europa.eu/a4g/mapping/sf-rml/'),
+  owl: rdf.namespace('http://www.w3.org/2002/07/owl#'),
+  skos: rdf.namespace('http://www.w3.org/2004/02/skos/'),
+  dcterms: rdf.namespace('http://purl.org/dc/terms/'),
+  m8g: rdf.namespace('http://data.europa.eu/m8g/'),
+  locn: rdf.namespace('http://www.w3.org/ns/locn#')
 }
 
 export default ns

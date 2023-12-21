@@ -6,9 +6,10 @@
   "license": "MIT",
   "bugs": {},
   "dependencies": {
+    "@comake/rmlmapper-js": "^0.5.2",
     "@rdfjs-elements/formats-pretty": "^0.6.4",
     "@rdfjs/data-model": "^2.0.1",
-
+    "@rmlio/rmlmapper-java-wrapper": "^2.1.1",
     "get-stream": "^8.0.1",
     "node-calls-python": "^1.8.0",
     "rdf-ext": "^2.5.1",
