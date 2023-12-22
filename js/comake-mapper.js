@@ -1,10 +1,10 @@
 import * as RmlMapper from '@comake/rmlmapper-js'
-import { readTurtleFiles } from '../src/support.js'
+import { getMappingDataset } from '../src/support.js'
 import { prettyPrint, print } from '../src/support.js'
 import { readFileSync } from 'fs'
 
 const path = 'transformation/mappings'
-const dataset = await readTurtleFiles({ path })
+const dataset = await getMappingDataset({ path })
 const turtleMapping = await prettyPrint({ dataset })
 
 // // Lazily load stuff

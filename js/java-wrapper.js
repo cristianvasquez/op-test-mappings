@@ -1,9 +1,9 @@
 import RMLMapperWrapper from '@rmlio/rmlmapper-java-wrapper'
-import { prettyPrint, readTurtleFiles } from '../src/support.js'
+import { prettyPrint, getMappingDataset } from '../src/support.js'
 import { readFileSync } from 'fs'
 
 const path = 'transformation/mappings'
-const dataset = await readTurtleFiles({ path })
+const dataset = await getMappingDataset({ path })
 // const sources = new Proxy({}, {
 //   get: (target, property) => {
 //     if (!target[property]) {

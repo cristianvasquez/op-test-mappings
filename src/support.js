@@ -32,8 +32,6 @@ async function prettyPrint ({ dataset }) {
   return await getStream(stream)
 }
 
-const test = (x) => !x.endsWith('object.rml.ttl')
-
 // What is the working combination?
 // const test = (x) => x.endsWith('notice.rml.ttl')
 //     | x.endsWith('technical_mapping_F03.rml.ttl')
@@ -41,10 +39,10 @@ const test = (x) => !x.endsWith('object.rml.ttl')
 //     | x.endsWith('annex_d1.rml.ttl')
 //     | x.endsWith('notice.rml.ttl')
 
-async function readTurtleFiles ({ path }) {
+async function getMappingDataset ({ path }) {
   const files = fs.readdirSync(path)
   const combinedDataset = rdf.dataset()
-  for (const file of files.filter(test)) {
+  for (const file of files) {
     if (extname(file) === '.ttl') {
 
       const filePath = join(path, file)
@@ -63,4 +61,4 @@ async function readTurtleFiles ({ path }) {
   return combinedDataset
 }
 
-export { print, prettyPrint, readTurtleFiles }
+export { print, prettyPrint, getMappingDataset }

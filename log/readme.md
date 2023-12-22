@@ -1,24 +1,21 @@
-## Problem
+## Problems
 
-I don't know how to combine these mapping, the libraries fail without giving me any feedback.
-
-## Solution
-
-It worked when downgrading rmlmapper-6.3.0-r371-all.jar to rmlmapper-6.2.1-r368-all.jar
+- [x] I cannot make this work with any mapper
+    - The version that worked: rmlmapper-6.2.1-r368-all.jar. Other Libraries fail with the mappings, including
+      rmlmapper-6.3.0-r371-all.jar
+- [X] I don't know how to combine these mapping, the libraries fail without giving me any feedback.
+    - How to group the mappings?: They are meant to be 'One graph for each directory', there is one directory for each document type.
 
 ## Log 21/12/2023
 
-Setup RML.
-
-## Hello world
-
-Worked in morphrc and rml.jar
+I did a setup of RML using a Hello World. morphrc and rmlmapper-6.3.0-r371-all.jar work
 
 ## Notice f03
 
 - It didn't work with morphrc (python).
 
-- Produced RDF with rmlmapper and one segment of the mapping.
+- Produced some RDF triples with rmlmapper-6.3.0-r371-all.jar when
+  using [technical_mapping_F03.rml.ttl](..%2Ftransformation%2Fmappings%2Ftechnical_mapping_F03.rml.ttl)
 
 ```sh
 java -jar rmlmapper.jar -m transformation/mappings/technical_mapping_F03.rml.ttl
@@ -67,3 +64,9 @@ Exception in thread "main" io.rml.framework.shared.RMLException: "http://publica
 ```log
 io.rml.framework.shared.RMLException: "http://publications.europa.eu/resource/authority/award-criterion-type/quality"^^<http://www.w3.org/2001/XMLSchema#string>: No template found.
 ```
+
+## Success
+
+It worked when downgrading rmlmapper-6.3.0-r371-all.jar to rmlmapper-6.2.1-r368-all.jar.
+
+How to group the mappings: One graph for each directory.
