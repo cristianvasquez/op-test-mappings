@@ -52,7 +52,7 @@ async function getMappingDataset ({ path }) {
       await current.import(formats.parsers.import('text/turtle', fileStream))
 
       for (const quad of current) {
-        quad.namedgraph = rdf.namedNode('file')
+        quad.namedgraph = rdf.namedNode(file)
         combinedDataset.add(quad)
       }
 
