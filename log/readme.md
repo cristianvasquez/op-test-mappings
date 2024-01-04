@@ -10,7 +10,9 @@
 
 I did a setup of RML using a Hello World. morphrc and rmlmapper-6.3.0-r371-all.jar work
 
-## Notice f03
+## First try (morphrc)
+
+### Notice f03
 
 - It didn't work with morphrc (python).
 
@@ -43,13 +45,13 @@ at be.ugent.rml.cli.Main.run(Main.java:416)
 at be.ugent.rml.cli.Main.main(Main.java:49)
 ```
 
-## Javascript
+## comake-mapper (Javascript)
 
 Gave a try to comake-mapper. It outputs an empty string.
 
 Gave a try to rml wrapper. It fails with the same error as no wrapper.
 
-## Scala
+## streamer (Scala)
 
 I gave a try to the streamer.
 
@@ -65,7 +67,7 @@ Exception in thread "main" io.rml.framework.shared.RMLException: "http://publica
 io.rml.framework.shared.RMLException: "http://publications.europa.eu/resource/authority/award-criterion-type/quality"^^<http://www.w3.org/2001/XMLSchema#string>: No template found.
 ```
 
-## Success
+## rmlmapper-6.3.0-r371-all (Java - Success)
 
 It worked when downgrading rmlmapper-6.3.0-r371-all.jar to rmlmapper-6.2.1-r368-all.jar. This is not ideal, but it works. 
 
