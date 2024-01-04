@@ -1,9 +1,9 @@
 ## Problems
 
-- [x] I cannot make this work with any mapper
+- [x] ~~I cannot make this work with any mapper~~
     - The version that worked: rmlmapper-6.2.1-r368-all.jar. Other Libraries fail with the mappings, including
       rmlmapper-6.3.0-r371-all.jar
-- [X] I don't know how to combine these mapping, the libraries fail without giving me any feedback.
+- [X] ~~I don't know how to combine these mapping, the libraries fail without giving me any feedback.~~
     - How to group the mappings?: They are meant to be 'One graph for each directory', there is one directory for each document type.
 
 ## Log 21/12/2023
@@ -67,6 +67,6 @@ io.rml.framework.shared.RMLException: "http://publications.europa.eu/resource/au
 
 ## Success
 
-It worked when downgrading rmlmapper-6.3.0-r371-all.jar to rmlmapper-6.2.1-r368-all.jar.
+It worked when downgrading rmlmapper-6.3.0-r371-all.jar to rmlmapper-6.2.1-r368-all.jar. This is not ideal, but it works. 
 
 How to group the mappings: One graph for each directory.
